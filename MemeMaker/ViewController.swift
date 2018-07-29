@@ -42,14 +42,15 @@ class ViewController: UIViewController {
         
     }
 
-//    @IBAction func segmentChanged(_ sender: UISegmentedControl) {
-//        let quote = topCaptionSegmentedControl.selectedSegmentIndex
-//    }
-//    
-//    func getQuote(
-//        for quote in topCaptionList {
-//        topCaptionLabel.text = quote
-//    }
-
+    @IBAction func topSegmentChanged(_ sender: UISegmentedControl) {
+        let index = topCaptionSegmentedControl.selectedSegmentIndex
+        topCaptionLabel.text = topCaptionList[index]
+    }
+    
+    @IBAction func bottomSegmentChanged(_ sender: UISegmentedControl) {
+        let index = bottomCaptionSegmentedControl.selectedSegmentIndex
+        bottomCaptionLabel.text = bottomCaptionList[index]
+    }
+    
 }
 
